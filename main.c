@@ -14,5 +14,6 @@ int main (int argc, char *argv[]) {
     solicitarValoresSalida(numVariables, salidas);
     generarExpresionSOP(numVariables, salidas);
     
+    
     return 0;
 }

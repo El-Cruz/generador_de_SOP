@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,18 +7,14 @@
 void caratula();
 int solicitar_variables();
 void tabla_verdad(int num_variables);
-void limpiar_terminal();
 void solicitarValoresSalida(int variables, int *salidas);
 void generarExpresionSOP(int variables, int *salidas);
 
-void limpiar_terminal() {
-    system("clear");
-}
 
 //función mostrar carátula
 void caratula(){
 
-    limpiar_terminal();
+    
     int continuar;
     printf("\n========================================================\n");
     printf("=       PROYECTO FINAL - MATEMATICAS DISCRETAS          =\n");
@@ -28,7 +25,7 @@ void caratula(){
     printf("\n=========================================================\n");
     printf("Descripcion del programa:\n");
     printf("Este programa genera una expresion SOP a partir de una\ntabla de verdad ingresada por el usuario.\n");
-    printf("=                     2024 - 2025                       =\n");
+    printf("                     2024 - 2025                       \n");
     printf("\n=========================================================\n");
     printf("Presione '1' para continuar...");
     scanf("%d", &continuar);
@@ -37,7 +34,6 @@ void caratula(){
 
 //función para solicitar el numero de variables y comprobar el rango
 int solicitar_variables(){
-    limpiar_terminal();
     int num_variables;
     do{
     printf("Ingrese el numero de variables: ");
@@ -92,8 +88,8 @@ void generarExpresionSOP(int variables, int *salidas) {
     int primeraTerm = 1;
     int todasCero = 1;
     int todasUno = 1;
-    
-     for (int i = 0; i < filas; i++) {
+
+     for (int i = 0; i < filas; i++) { //aquí se comprueba si todas las salidas son 0 o 1
         if (salidas[i] == 1) todasCero = 0;
         if (salidas[i] == 0) todasUno = 0;
     }
